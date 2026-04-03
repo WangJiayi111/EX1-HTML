@@ -7,54 +7,44 @@
         body {
             margin: 20px;
             font-family: sans-serif;
+            text-align: center;  
         }
-        /* 两图并排行：宽度相同，不设置高度（自动按比例） */
         .image-row {
             display: flex;
             gap: 20px;
-            flex-wrap: wrap;
+            justify-content: center;
             margin-bottom: 20px;
-            align-items: flex-start;
         }
-        .image-row img {
-            width: 300px;     /* 固定宽度，高度自动按比例 */
-        }
-
         .image-row img:first-child {
-        width: 500px;
+            width: 500px;
         }
-
         .image-row img:last-child {
-        width: 200px;   /* 单独修改 naughtiest-son 的大小 */
+            width: 200px;
         }
-
-        /* 角色表格：一行三个 */
         .character-table {
             width: 100%;
-            border-collapse: collapse;
             margin-bottom: 20px;
+            text-align: left;
         }
         .character-table td {
             text-align: center;
-            vertical-align: top;
             padding: 10px;
             width: 33%;
         }
         .character-img {
-            width: 150px;      /* 固定宽度，高度自动按比例 */
+            width: 150px;
         }
-        
         video {
-        width: 640px;
-        height: auto;
-        max-width: 100%;
-        margin: 20px 0;
+            display: block;
+            width: 640px;
+            max-width: 100%;
+            margin: 20px auto;
         }
-        
         form {
             margin: 20px 0;
             border-top: 1px solid #ccc;
             padding-top: 15px;
+            text-align: left;
         }
         input, select, textarea {
             margin: 5px 0;
@@ -65,73 +55,64 @@
         }
         footer {
             margin-top: 30px;
-            font-size: 0.9em;
             text-align: center;
         }
     </style>
 </head>
 <body>
 
-    <!-- 日期行 -->
     <p>05/04/2025, 17:16 Shinchan - Homepage</p>
 
-    <!-- 两图并排：宽度相同（300px），高度自动按比例 -->
     <div class="image-row">
         <img src="assets/shin-chan-banner.jpg" alt="Shinchan Banner">
         <img src="assets/naughtiest-son.jpg" alt="Naughtiest Son">
     </div>
-
-    <!-- 游戏标题组合 -->
     <p style="font-size:1.2em; font-weight:bold;">Shinchan: Shiro and the Coal Town Game Characters Who's your favorite?</p>
     <h1>Shinchan: Shiro and the Coal Town</h1>
     <p><strong>Available on:</strong> Nintendo Switch and Windows PC</p>
 
-    <!-- 视频 -->
     <video controls>
         <source src="assets/shinchan-and-the-coal-town.mp4" type="video/mp4">
-        Your browser does not support the video tag.
     </video>
 
-    <!-- 角色表格：一行三个，两行 -->
     <h2>The Characters</h2>
-    <table class="character-table" border="0">
+    <table class="character-table">
         <tr>
             <td>
-                <img class="character-img" src="assets/character-shinchan.png" alt="Shinchan"><br>
+                <img class="character-img" src="assets/character-shinchan.png"><br>
                 <strong>Shinnosuke Nohara (Shinchan)</strong><br>
                 The mischievous 5-year-old protagonist known for his hilarious antics and love of choco chips.
             </td>
             <td>
-                <img class="character-img" src="assets/character-misae.webp" alt="Misae"><br>
+                <img class="character-img" src="assets/character-misae.webp"><br>
                 <strong>Misae Nohara (Mom)</strong><br>
                 Shinchan's short-tempered but loving mother, always trying to keep him in line.
             </td>
             <td>
-                <img class="character-img" src="assets/character-hiroshi.webp" alt="Hiroshi"><br>
+                <img class="character-img" src="assets/character-hiroshi.webp"><br>
                 <strong>Hiroshi Nohara (Dad)</strong><br>
                 The laid-back father who works at a company and enjoys his evening beer.
             </td>
         </tr>
         <tr>
             <td>
-                <img class="character-img" src="assets/character-himawari.png" alt="Himawari"><br>
+                <img class="character-img" src="assets/character-himawari.png"><br>
                 <strong>Himawari (Sister)</strong><br>
                 The youngest of the Noharas. Loves shiny objects and brandname goods. Smiles sideways, like Shinchan.
             </td>
             <td>
-                <img class="character-img" src="assets/character-shiro.png" alt="Shiro"><br>
+                <img class="character-img" src="assets/character-shiro.png"><br>
                 <strong>Yukino Nohara (Shiro)</strong><br>
                 The family dog — small, fluffy, and sometimes the most sensible member of the household.
             </td>
             <td>
-                <img class="character-img" src="assets/character-toru-kazama.webp" alt="Kazama"><br>
+                <img class="character-img" src="assets/character-toru-kazama.webp"><br>
                 <strong>Toru Kazama</strong><br>
                 The smart and responsible friend of Shinchan, often the voice of reason in the group.
             </td>
         </tr>
     </table>
 
-    <!-- 第一个表单 -->
     <h2>Who's your favorite?</h2>
     <form>
         <label>Who's your favorite character?</label>
@@ -153,7 +134,6 @@
         <button type="submit">Submit</button>
     </form>
 
-    <!-- 第二个表单 -->
     <h2>Tell us a bit more about yourself</h2>
     <form>
         <label>Your Name:</label>
