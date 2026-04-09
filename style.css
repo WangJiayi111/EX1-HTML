@@ -1,0 +1,134 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #fddd7b;
+}
+
+
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: #f2ba00;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+}
+
+nav a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover{
+    color: orange;
+}
+
+
+.banner{
+    text-align: center;
+}
+
+.banner img{
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.4s;
+}
+
+.banner img:hover{
+    transform: scale(1.05);
+}
+
+
+h1, h4{
+    text-align: center;
+}
+
+
+video{
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+
+.character-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card{
+    width: 230px;
+    background: rgb(248, 238, 201);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    transition: transform 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+}
+
+.card img{
+    border-radius: 10px;
+}
+
+
+form{
+    width: 60%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input, select, textarea{
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+button{
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    background-color: rgb(240, 203, 101);
+    color: white;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+button:hover{
+    background-color: rgb(219, 153, 32);
+}
+
+/* ===== Footer ===== */
+footer{
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+}
+
+/* ===== 响应式 ===== */
+@media (max-width: 768px){
+    .character-container{
+        flex-direction: column;
+        align-items: center;
+}
+
+form{
+width: 90%;
+}
+}
